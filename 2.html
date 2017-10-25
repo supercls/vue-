@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/flex_rem.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/compoent.js"></script>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<Compoentheader :title="title" :message="message">
+			<p slot="cont" :style="{textAlign:'center',color:'#f00',marginRight:'20%'}">商品 详情</p> 
+		</Compoentheader>
+		<Componentdetail :detailsrc="detailsrc" :detailshop="detailshop" :detailmoneny="detailmoneny"></Componentdetail>
+		<Componentfooter :footerindex="footerindex"></Componentfooter>
+	</div>
+	<script src="js/detail.js"></script>
+<style>
+	.detailcont img{width: 90%;max-height: 200px;margin:15px 5%;}
+	.detailcont p,h5{text-align: left;color: #f00;padding-left: 100px;}
+</style>
+</body>
+</html>
